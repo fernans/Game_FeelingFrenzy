@@ -1,0 +1,10 @@
+ahí va la pantalla de nuevo, esta vez con muuchos menos frames(la animación en si), ya en 2 tamaños por si acaso.
+
+Sin lo que hace es que los frames que sean duren 1 segundo, imagino que solamente tendrás que pillar los clave para que vaya bien, sin tener qu pillar los 12 no?
+
+los clave:
+
+pantalla_main_00.png
+pantalla_main_03.png
+pantalla_main_06.png
+pantalla_main_09.png

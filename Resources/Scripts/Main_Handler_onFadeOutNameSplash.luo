@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function Main.onFadeOutNameSplash()
+
+
+
+
+this.currentName(hud.getEditText(hud.getComponent(this.getUser(),"nameSplash.name")))
+
+this.levelMenu()
+
+
+end

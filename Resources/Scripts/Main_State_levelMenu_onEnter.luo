@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+function Main.levelMenu_onEnter()
+
+
+
+
+
+this.state("levelMenu")
+local hUser=application.getCurrentUser()
+
+hud.destroyTemplateInstance(hUser,"levelMenu")
+if(not this.FREE())then
+hud.newTemplateInstance(hUser,"levelMenu","levelMenu")
+else
+ hud.newTemplateInstance(hUser,"levelMenuFREE","levelMenu")
+end
+
+end

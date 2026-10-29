@@ -1,0 +1,20 @@
+--------------------------------------------------------------------------------
+--  Handler.......... : onSensorCollision
+--  Author........... : 
+--  Description...... : 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+function playerAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID )
+--------------------------------------------------------------------------------
+	
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	-- This handler is called when a sensor collision occurs.
+	--
+	-- remove target object
+    scene.destroyRuntimeObject ( application.getCurrentUserScene ( ), hTargetObject )
+    --scene.createRuntimeObject ( application.getCurrentUserScene ( ), "points" )
+--------------------------------------------------------------------------------
+end
+--------------------------------------------------------------------------------

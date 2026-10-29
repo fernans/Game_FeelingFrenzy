@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function inGameAI.onFadeOutScoreSplashFREE()
+
+
+
+
+
+
+this.gameOverWinFREE()
+
+
+end

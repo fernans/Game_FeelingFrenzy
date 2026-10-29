@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function Main.scoresSplash_onEnter()
+
+
+this.refreshScores()
+
+
+
+
+
+end

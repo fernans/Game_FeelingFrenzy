@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+function puntosAI.onSet(prefix)
+
+
+
+
+
+local p=this.getObject()
+object.rotate(p,180,0,-90,object.kGlobalSpace)
+object.sendEvent(p,"animAI","onAddAnim","puntos",prefix,39,25)
+object.postEvent(p,1.6,"puntosAI","onDead")
+
+object.sendEvent(p,"animAI","onSetAnim","puntos")
+object.sendEvent(p,"animAI","onPlay")
+
+end

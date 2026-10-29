@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+function inGameAI.onMouseButtonDown(nButton,nPointX,nPointY,nRayPntX,nRayPntY,nRayPntZ,nRayDirX,nRayDirY,nRayDirZ)
+
+
+
+
+
+
+
+if(hud.getComponentAtPoint(application.getCurrentUser(),(nPointX+1)*50,(nPointY+1)*50)==nil)then
+nPointX=nPointX*application.getCurrentUserViewportAspectRatio()
+object.sendEvent(this.player(),"playerAI","onSetTarget",nPointX,this.Y(),0)
+this.buttonDown(true)
+
+
+if(this.currentPrize()~=nil)then
+object.sendEvent(this.currentPrize(),"premiosAI","onCheck",nPointX,nPointY)
+end
+end
+
+end

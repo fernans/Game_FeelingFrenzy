@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function animAI.onStop()
+
+
+
+
+
+this.stop()
+
+end

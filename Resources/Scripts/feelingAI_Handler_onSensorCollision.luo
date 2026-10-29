@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+function feelingAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
+
+
+
+
+
+
+
+if(nTargetSensorID==1)then
+
+this.dead()
+local p=scene.createRuntimeObject(application.getCurrentUserScene(),"puntos")
+object.matchTranslation(p,this.getObject(),object.kGlobalSpace)
+object.sendEvent(p,"puntosAI","onSet",table.getAt(this.puntosAnims(),this.ID()).."_")
+
+
+
+
+
+local gameAI=scene.getTaggedObject(application.getCurrentUserScene(),"sceneAI")
+object.sendEvent(gameAI,"inGameAI","onAddScore",this.score())
+end
+
+end

@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function feelingAI.normal_onEnter()
+
+
+
+
+
+object.sendEvent(this.getObject(),"animAI","onPlay")
+
+end

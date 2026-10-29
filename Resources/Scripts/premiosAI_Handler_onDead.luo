@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function premiosAI.onDead()
+
+
+
+
+
+local inGameAI=scene.getTaggedObject(application.getCurrentUserScene(),"sceneAI")
+object.sendEvent(inGameAI,"inGameAI","onClearPrize")
+scene.destroyRuntimeObject(application.getCurrentUserScene(),this.getObject())
+
+end

@@ -1,0 +1,26 @@
+--------------------------------------------------------------------------------
+--  State............ : end
+--  Author........... : 
+--  Description...... : 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+function crecerAI.end_onLoop ( )
+--------------------------------------------------------------------------------
+	
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	--
+    local x=object.getScale ( this.getObject ( ) )
+    local fs=this.originalScale ( )
+    if (x>fs) then
+        x=x*0.8
+        if (math.abs ( x-fs )<0.1) then x=fs end
+        object.setScale ( this.getObject ( ), x,x,x )
+        if (x==fs) then
+            object.removeAIModel ( this.getObject ( ), "crecerAI" )
+        end
+    end
+--------------------------------------------------------------------------------
+end
+--------------------------------------------------------------------------------

@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function Main.onDestroyHUD(_hud)
+
+
+
+
+
+hud.destroyTemplateInstance(application.getCurrentUser(),_hud)
+
+end

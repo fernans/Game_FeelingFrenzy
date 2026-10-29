@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+function Main.saveScores(score,level,name)
+
+
+
+if(score>table.getAt(this.bestScores(),0))then
+table.setAt(this.bestScores(),0,score)
+table.setAt(this.bestLevels(),0,level)
+table.setAt(this.bestNames(),0,name)
+
+for i=0,3
+ do
+local v1=table.getAt(this.bestScores(),i)
+local v2=table.getAt(this.bestScores(),i+1)
+if(v1>v2)then
+ table.swap(this.bestScores(),i,i+1)
+
+
+table.swap(this.bestLevels(),i,i+1)
+
+
+
+
+table.swap(this.bestNames(),i,i+1)
+
+
+
+
+end
+end
+end
+
+
+
+for i=0,4 do
+local s=table.getAt(this.bestScores(),i)
+application.setCurrentUserEnvironmentVariable("score"..i,s)
+local l=table.getAt(this.bestLevels(),i)
+application.setCurrentUserEnvironmentVariable("level"..i,l)
+local n=table.getAt(this.bestNames(),i)
+application.setCurrentUserEnvironmentVariable("name"..i,n)
+end
+application.saveCurrentUserEnvironment()
+
+end

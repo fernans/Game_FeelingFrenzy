@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+function inGameAI.onSetBackground(_set)
+
+
+
+
+
+if(_set)then
+scene.setBackgroundTexture(application.getCurrentUserScene(),hashtable.get(this.levelValues(),"background"))
+else
+scene.setBackgroundTexture(application.getCurrentUserScene(),"black")
+end
+
+end

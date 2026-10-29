@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+function animAI.onAddAnim(_name,_prefix,_last,_fps,_next)
+
+
+
+
+
+if not hashtable.contains(this.anim_name(),_name)then
+hashtable.add(this.anim_name(),_name,_prefix)
+hashtable.add(this.anim_last(),_name,_last)
+hashtable.add(this.anim_fps(),_name,_fps)
+if(_next==nil)then _next=_name end
+hashtable.add(this.anim_next(),_name,_next)
+else
+log.message("alreadyExist: ".._name)
+end
+
+end

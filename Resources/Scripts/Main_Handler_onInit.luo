@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+function Main.onInit()
+
+
+
+
+
+
+
+application.setOption(application.kOptionAutomaticVirtualKeyboard,1)
+application.setCurrentUserScene("none")
+hud.setSoundBank(this.getUser(),"sbHUD")
+
+
+for relleno=0,(5-table.getSize(this.bestLevels()))do table.add(this.bestLevels(),0)end
+for relleno=0,(5-table.getSize(this.bestNames()))do table.add(this.bestNames(),"---")end
+for relleno=0,(5-table.getSize(this.bestScores()))do table.add(this.bestScores(),0)end
+
+local free=application.getCurrentUserEnvironmentVariable("FREE")
+if(free~=nil)then
+this.FREE(free)
+end
+log.message("FREE=")
+log.message(free)
+
+application.setCurrentUserEnvironmentName("kimochis.feeling.frenzy")
+if(application.loadCurrentUserEnvironment("kimochis.feeling.frenzy"))then
+
+for i=0,4 do
+local s=application.getCurrentUserEnvironmentVariable("score"..i)
+if(s==nil)then s=0 end
+log.message("score: "..i.." = "..s)
+table.setAt(this.bestScores(),i,s)
+local l=application.getCurrentUserEnvironmentVariable("level"..i)
+if(l==nil)then l=0 end
+log.message("level: "..i.." = "..l)
+table.setAt(this.bestLevels(),i,l)
+local n=application.getCurrentUserEnvironmentVariable("name"..i)
+if(n==nil)then n="--"end
+log.message("name: "..i.." = "..n)
+table.setAt(this.bestNames(),i,n)
+end
+end
+
+
+
+end

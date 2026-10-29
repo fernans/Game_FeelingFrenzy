@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+function playerAI.onSetSensor(x,y,z,scale)
+
+
+
+
+
+local gs=this.globalScale()
+this.sensorRadius(scale)
+this.sensorX(x)
+this.sensorY(y)
+this.sensorZ(z)
+local s=this.sensor()
+this.sendEvent("onUpdateScale",1)
+
+end

@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function encogerAI.main_onEnter()
+
+
+
+
+
+local sceneObj=scene.getTaggedObject(application.getCurrentUserScene(),"sceneAI")
+sound.play(sceneObj,7,1,false,1)
+
+end

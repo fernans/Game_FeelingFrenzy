@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function inGameAI.onFadeOutLevelSplash()
+
+
+
+
+
+
+this.playing()
+
+end

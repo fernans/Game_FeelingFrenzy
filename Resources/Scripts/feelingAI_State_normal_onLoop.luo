@@ -1,0 +1,30 @@
+
+
+
+
+
+
+
+function feelingAI.normal_onLoop()
+
+
+
+
+
+
+local f=this.latFase()+application.getLastFrameTime()
+this.latFase(f)
+local intensity=math.cos(f*360*this.latFreq())*this.latForce()
+
+dynamics.addForce(this.getObject(),intensity,0,0,object.kGlobalSpace)
+
+
+local inGameAI=scene.getTaggedObject(application.getCurrentUserScene(),"sceneAI")
+local var=object.getAIVariable(inGameAI,"inGameAI","isPlaying")
+local x,y,z=object.getTranslation(this.getObject(),object.kGlobalSpace)
+if(y<-1 or not var)then
+this.dead()
+end
+
+
+end

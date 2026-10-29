@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+function inGameAI.onMouseMove(nPointX,nPointY,nDeltaX,nDeltaY,nRayPntX,nRayPntY,nRayPntZ,nRayDirX,nRayDirY,nRayDirZ)
+
+
+
+
+
+
+if(hud.getComponentAtPoint(application.getCurrentUser(),(nPointX+1)*50,(nPointY+1)*50)==nil)then
+if(this.buttonDown())then
+nPointX=nPointX*application.getCurrentUserViewportAspectRatio()
+object.sendEvent(this.player(),"playerAI","onSetTarget",nPointX,this.Y(),0)
+end
+end
+
+end

@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function puntosAI.onDead()
+
+
+
+
+
+this.dead()
+
+end

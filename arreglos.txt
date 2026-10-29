@@ -1,0 +1,35 @@
+ARREGLOS KIMOCHIS IPAD:
+
+Menu Principal: (si quieres, dame un PSD por capas, y yo recorto a texturas cuadradas)
+Fondo, Estrella, Play, HowTo, Scores, About
+KimochisFeelingFrenzy
+Bug, Cat, Cloud, Hugg (opc: sec de 1 seg. 12 frames)
+
+About:
+Fondo, back (opc: capa solo con el texto, para intentar hacerle scroll)
+
+Scores:
+Fondo, back (uso el mismo), clear
+
+HowToPlay: (si quieres, dame un PSD por capas, y yo recorto a texturas cuadradas)
+Fondo, back (uso el mismo), ()TAP&DRAG, ()GOOD, ()BAD  -  [para hacerlos aparecer en secuencia]
+
+-------
+
+Name:
+Fondo, back (uso el mismo), GO
+
+LevelMenu:
+Fondo, back (uso el mismo), EASY, NORMAL, HARD, CRAZY
+
+Pause:
+textos PAUSE, RESUME por separado (para hacerlos pulsables)
+
+-------
+
+Loading:
+Pantalla nueva
+Lo pondré allá donde vea que hayan pausas en tu iPad...
+(ej. tras seleccionar nivel, antes de salir su Level Splash.. es donde hace la carga de todas las texturas del juego)
+(ej. tras darle pause y exit, se queda un rato en la escena 3d, antes de salir al menu)
+

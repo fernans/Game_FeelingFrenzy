@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function puntosAI.grow_onEnter()
+
+
+
+
+
+shape.setMeshOpacity(this.getObject(),100)
+
+end

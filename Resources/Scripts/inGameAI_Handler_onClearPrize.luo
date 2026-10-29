@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function inGameAI.onClearPrize()
+
+
+
+
+
+this.currentPrize(nil)
+
+end

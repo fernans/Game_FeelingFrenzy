@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+function Main.onApplicationWillQuit()
+
+
+
+
+
+
+
+local hUser=application.getCurrentUser()
+hud.callAction(hUser,"mainMenu.soundBye")
+
+end

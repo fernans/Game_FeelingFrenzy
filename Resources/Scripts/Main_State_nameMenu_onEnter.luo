@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function Main.nameMenu_onEnter()
+
+
+
+
+
+this.state("nameMenu")
+local hUser=application.getCurrentUser()
+
+hud.destroyTemplateInstance(hUser,"nameSplash")
+hud.newTemplateInstance(hUser,"nameSplash","nameSplash")
+
+local hScene=application.getCurrentUserScene()
+music.playAdditional(hScene,"musicB",0.5)
+
+end

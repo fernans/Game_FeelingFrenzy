@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+function inGameAI.onAddAI(model)
+
+
+
+
+
+local valido=true
+for i=0,object.getAIModelCount(this.getObject())do
+if(object.getAIModelNameAt(this.getObject(),i)==model)then
+valido=false
+end
+end
+if(valido)then
+object.addAIModel(this.getObject(),model)
+end
+
+end

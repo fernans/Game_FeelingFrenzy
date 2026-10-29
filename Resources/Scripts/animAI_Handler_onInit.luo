@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function animAI.onInit()
+
+
+
+
+
+
+this.lastTime((this.last()+1)/this.FPS())
+
+end

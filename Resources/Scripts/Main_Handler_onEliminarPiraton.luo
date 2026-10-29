@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function Main.onEliminarPiraton()
+
+
+
+
+
+hud.destroyTemplateInstance(this.getUser(),"piraton")
+
+end

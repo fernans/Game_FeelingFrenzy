@@ -1,0 +1,23 @@
+--------------------------------------------------------------------------------
+--  State............ : inGame
+--  Author........... : 
+--  Description...... : 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+function Main.inGame_onEnter ( )
+--------------------------------------------------------------------------------
+    
+    application.setCurrentUserScene ( "InGame" )
+    local hScene=application.getCurrentUserScene ( )
+    application.setCurrentUserActiveCamera ( scene.getTaggedObject ( hScene, "mainCamera" ) )	
+    local hUser = application.getCurrentUser ( )
+    hud.destroyTemplateInstance ( hUser, "mainMenu" )
+    local sceneObj = scene.getTaggedObject ( hScene, "sceneAI" )
+    local sceneAI = object.getAIModelNameAt ( sceneObj, 0 )
+    object.sendEvent ( sceneObj, sceneAI, "onSetLevel", this.currentlevel ( ) )
+    this.state ( "inGame" )
+
+--------------------------------------------------------------------------------
+end
+--------------------------------------------------------------------------------

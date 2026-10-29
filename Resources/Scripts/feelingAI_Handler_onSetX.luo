@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function feelingAI.onSetX(tx)
+
+
+local f=this.getObject()
+object.setTranslation(f,tx,1,0,object.kGlobalSpace)
+
+
+end

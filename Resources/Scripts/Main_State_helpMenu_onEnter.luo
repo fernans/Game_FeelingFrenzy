@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+function Main.helpMenu_onEnter()
+
+
+
+
+
+this.state("helpMenu")
+local hUser=application.getCurrentUser()
+
+hud.destroyTemplateInstance(hUser,"helpMenu")
+hud.newTemplateInstance(hUser,"helpMenu","helpMenu")
+
+
+
+
+
+end

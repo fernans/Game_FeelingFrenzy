@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function feelingAI.dead_onEnter()
+
+
+
+
+
+scene.destroyRuntimeObject(application.getCurrentUserScene(),this.getObject())
+
+end

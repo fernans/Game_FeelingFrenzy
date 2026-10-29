@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+function Main.onMouseButtonUp(nButton,nPointX,nPointY,nRayPntX,nRayPntY,nRayPntZ,nRayDirX,nRayDirY,nRayDirZ)
+
+
+
+
+
+
+if(this.state()=="inGame")then
+local sceneObj=scene.getTaggedObject(application.getCurrentUserScene(),"sceneAI")
+local sceneAI=object.getAIModelNameAt(sceneObj,0)
+object.sendEvent(sceneObj,sceneAI,"onMouseButtonUp",nButton,nPointX,nPointY,nRayPntX,nRayPntY,nRayPntZ,nRayDirX,nRayDirY,nRayDirZ)
+end
+
+end

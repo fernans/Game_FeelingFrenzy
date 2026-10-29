@@ -1,0 +1,48 @@
+
+
+
+
+
+
+
+function inGameAI.onInit()
+
+
+
+
+
+
+this.init()
+
+hud.destroyTemplateInstance(application.getCurrentUser(),"marcador")
+hud.newTemplateInstance(application.getCurrentUser(),"marcador","marcador")
+local slider=hud.getComponent(application.getCurrentUser(),"marcador.root")
+hud.setComponentVisible(slider,false)
+hud.setSoundBank(application.getCurrentUser(),"sbHUD")
+
+local p=scene.getTaggedObject(application.getCurrentUserScene(),"player")
+if(p~=nil)then
+this.player(p)
+
+
+
+
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+log.warning("destroy inGameAI.onInit")
+hud.destroyTemplateInstance(application.getCurrentUser(),"loading")
+
+
+end

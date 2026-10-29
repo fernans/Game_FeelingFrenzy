@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function encogerAI.stay_onLoop()
+
+
+
+
+
+local dt=application.getLastFrameTime()
+local ct=this.time()
+ct=ct-dt
+if(ct<=0)then
+this.dead()
+else
+this.time(ct)
+end
+
+end

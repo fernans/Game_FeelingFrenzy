@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+function premiosAI.onCheck(_x,_y)
+
+
+
+
+
+local tx,ty,tz=object.getTranslation(this.getObject(),object.kGlobalSpace)
+
+local d=math.vectorLength(math.vectorSubtract(tx,ty,tz,_x,_y,0))
+if(d<0.15)then
+this.sendEvent("onExplotar")
+end
+
+end

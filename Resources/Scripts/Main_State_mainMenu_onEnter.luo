@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+function Main.mainMenu_onEnter()
+
+
+
+
+
+this.state("mainMenu")
+local hUser=application.getCurrentUser()
+
+hud.destroyTemplateInstance(hUser,"mainMenu")
+if(not this.FREE())then
+hud.newTemplateInstance(hUser,"mainMenu","mainMenu")
+else
+ hud.newTemplateInstance(hUser,"mainMenuFREE","mainMenu")
+end
+
+if(this.firstTime())then
+this.firstTime(false)
+
+hud.callAction(hUser,"mainMenu.soundWellcome")
+end
+
+
+
+
+
+
+
+
+
+
+
+local hScene=application.getCurrentUserScene()
+music.playAdditional(hScene,"musicA",0.5)
+music.setVolume(hScene,0.3,0)
+
+
+
+
+
+
+
+
+end

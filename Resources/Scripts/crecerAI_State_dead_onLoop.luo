@@ -1,0 +1,33 @@
+
+
+
+
+
+
+
+function crecerAI.dead_onLoop()
+
+
+
+
+
+local dt=application.getLastFrameTime()
+local x=this.currentlScale()
+local fs=1
+if(x>fs)then
+x=math.interpolate(x,fs,dt*10)
+if(math.abs(x-fs)<0.01)then x=fs end
+object.sendEvent(this.getObject(),"playerAI","onUpdateScale",x)
+this.currentlScale(x)
+local f=this.flash()
+f=f-10
+if(f<=0)then f=100 end
+this.flash(f)
+if(x==fs)then f=0 end
+shape.overrideMeshMaterialEmissive(this.getObject(),255,255,0,f/100)
+if(x==fs)then
+object.removeAIModel(this.getObject(),"crecerAI")
+end
+end
+
+end

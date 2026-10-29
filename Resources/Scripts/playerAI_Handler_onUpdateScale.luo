@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function playerAI.onUpdateScale(x)
+
+
+
+
+
+this.pivotY((x-1)*0.35)
+local gs=this.globalScale()
+local fss=this.sensorRadius()*gs*x
+x=x*gs
+local s=this.sensor()
+sensor.setSphereRadiusAt(s,0,fss)
+sensor.setSphereCenterAt(s,0,this.sensorX()*x,this.sensorY()*x,this.sensorZ()*x,object.kLocalSpace)
+object.setScale(this.getObject(),x,x,x)
+
+end

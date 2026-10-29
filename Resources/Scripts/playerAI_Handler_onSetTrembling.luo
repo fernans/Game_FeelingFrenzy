@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function playerAI.onSetTrembling(n)
+
+
+
+
+
+this.trembling(n)
+
+end

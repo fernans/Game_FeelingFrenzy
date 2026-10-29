@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+function feelingAI.onSetParams(_ID,_score,_mass,_damping,_latForce,_latFreq)
+
+
+
+
+
+if(_ID~=nil)then this.ID(_ID)end
+if(_score~=nil)then this.score(_score)end
+if(_mass~=nil)then this.mass(_mass)end
+if(_damping~=nil)then this.damping(_damping)end
+if(_latForce~=nil)then this.latForce(_latForce)end
+if(_latFreq~=nil)then this.latFreq(_latFreq)end
+
+
+local f=this.getObject()
+
+
+
+dynamics.setMass(f,this.mass())
+dynamics.setLinearDamping(f,this.damping())
+
+
+
+
+
+
+
+
+
+end

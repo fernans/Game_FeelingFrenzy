@@ -1,0 +1,25 @@
+--------------------------------------------------------------------------------
+--  Function......... : resetGame
+--  Author........... : 
+--  Description...... : 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+function Main.resetGame ( )
+--------------------------------------------------------------------------------
+	
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	--
+    application.setCurrentUserScene ( "InGame" )
+    application.setCurrentUserActiveCamera ( scene.getTaggedObject ( application.getCurrentUserScene ( ), "mainCamera" ) )	
+    local hUser = application.getCurrentUser ( )
+    hud.destroyTemplateInstance ( hUser, "mainMenu" )
+    local sceneObj = scene.getTaggedObject ( application.getCurrentUserScene ( ), "sceneAI" )
+    local sceneAI = object.getAIModelNameAt ( sceneObj, 0 )
+    object.sendEvent ( sceneObj, sceneAI, "onInit" )
+    object.sendEvent ( sceneObj, sceneAI, "onSetLevel", this.currentlevel ( ) )
+    this.state ( "inGame" )
+--------------------------------------------------------------------------------
+end
+--------------------------------------------------------------------------------

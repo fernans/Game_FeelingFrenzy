@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function Main.onSetLevel(_level,_score)
+
+
+
+
+
+
+this.currentlevel(_level)
+this.lastScore(_score)
+
+end

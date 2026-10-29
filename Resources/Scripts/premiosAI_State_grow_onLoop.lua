@@ -1,0 +1,33 @@
+--------------------------------------------------------------------------------
+--  State............ : grow
+--  Author........... : 
+--  Description...... : 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+function premiosAI.grow_onLoop ( )
+--------------------------------------------------------------------------------
+	
+	local dt=application.getLastFrameTime ( )
+    if (this.active ( )) then
+        object.translate ( this.getObject ( ), 0.3*dt,0,0, object.kGlobalSpace )
+
+        local x,y,z=object.getTranslation ( this.getObject ( ), object.kGlobalSpace )
+        this.phase ( this.phase ( )+dt)
+        y=this.Yaxis ( )+math.sin((this.phase ( )+this.offset ( ))*360*this.freq ( ))*this.amp ( )
+        object.setTranslation ( this.getObject ( ), x,y,z, object.kGlobalSpace )
+        if (x>1) then
+            scene.destroyRuntimeObject ( application.getCurrentUserScene ( ), this.getObject ( ) )
+        end
+        
+        --comprobar si fin de playing... para matar premio
+        local inGameAI = scene.getTaggedObject ( application.getCurrentUserScene ( ), "sceneAI" )
+        local var = object.getAIVariable ( inGameAI, "inGameAI", "isPlaying" )
+        if (not var) then
+            this.sendEvent ( "onDead" )
+        end
+    end
+
+--------------------------------------------------------------------------------
+end
+--------------------------------------------------------------------------------

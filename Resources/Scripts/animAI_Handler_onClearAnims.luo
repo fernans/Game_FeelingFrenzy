@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+function animAI.onClearAnims()
+
+
+
+
+
+hashtable.empty(this.anim_name())
+hashtable.empty(this.anim_last())
+hashtable.empty(this.anim_fps())
+hashtable.empty(this.anim_next())
+
+end

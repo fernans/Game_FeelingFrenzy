@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function inGameAI.onSetLevel(_level)
+
+
+
+
+
+this.level(_level)
+this.levelSplash()
+
+end

@@ -1,0 +1,23 @@
+--------------------------------------------------------------------------------
+--  Handler.......... : onClearScores
+--  Author........... : 
+--  Description...... : 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+function Main.onClearScores (  )
+--------------------------------------------------------------------------------
+	log.message ( "clearScores" )
+    for i = 0, 4 do
+        table.setAt ( this.bestScores(),i,0 )
+        application.setCurrentUserEnvironmentVariable ( "score"..i, 0 )
+        table.setAt ( this.bestLevels(),i,0 )
+        application.setCurrentUserEnvironmentVariable ( "level"..i, 0)
+        table.setAt ( this.bestNames(),i, "---")
+        application.setCurrentUserEnvironmentVariable ( "name"..i, "---" )
+    end
+    application.saveCurrentUserEnvironment ( )
+    this.refreshScores ( )
+--------------------------------------------------------------------------------
+end
+--------------------------------------------------------------------------------

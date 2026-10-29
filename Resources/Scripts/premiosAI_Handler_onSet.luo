@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function premiosAI.onSet(t)
+
+
+
+
+
+this.tipo(t)
+
+end

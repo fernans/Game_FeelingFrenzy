@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function inGameAI.playing_onLeave()
+
+
+
+
+
+this.isPlaying(false)
+local slider=hud.getComponent(application.getCurrentUser(),"marcador.root")
+hud.setComponentVisible(slider,false)
+
+object.setVisible(this.player(),false)
+object.sendEvent(this.player(),"animAI","onStop")
+
+music.stop(application.getCurrentUserScene(),0.5)
+
+end

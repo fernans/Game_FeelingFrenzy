@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+function Main.buyMenu_onEnter()
+
+
+
+
+
+this.state("buyMenu")
+local hUser=application.getCurrentUser()
+
+hud.destroyTemplateInstance(hUser,"buyMenu")
+hud.newTemplateInstance(hUser,"buyMenu","buyMenu")
+
+end

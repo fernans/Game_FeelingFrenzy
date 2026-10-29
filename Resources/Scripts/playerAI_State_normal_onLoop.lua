@@ -1,0 +1,59 @@
+--------------------------------------------------------------------------------
+--  State............ : normal
+--  Author........... : 
+--  Description...... : 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+function playerAI.normal_onLoop ( )
+--------------------------------------------------------------------------------
+	
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	--
+    if (this.target ( ) ~=nil  and this.dyn ( )~=nil  and  this.current ( )~=nil) then
+        local d = object.getDistanceToObject ( this.current ( ), this.target ( ) )
+        local tx,ty,tz = object.getTranslation ( this.target ( ), object.kGlobalSpace )
+        local sx,sy,sz = object.getTranslation ( this.current ( ), object.kGlobalSpace )
+        local rx,ry,rz = math.vectorInterpolate ( sx, sy, sz, tx, ty, tz, 5 * application.getAverageFrameTime ( ))
+        if (d<0.01) then
+            rx,ry,rz = tx,ty,tz
+        end
+        object.setTranslation ( this.current ( ), rx, ry, rz, object.kGlobalSpace)
+        
+        -- colocar visible en su sitio
+        --object.setTranslation ( this.getObject ( ), rx, ry, rz, object.kGlobalSpace )
+        object.matchTranslation ( this.getObject ( ), this.current ( ), object.kGlobalSpace )
+        object.matchRotation ( this.getObject ( ), this.dyn ( ), object.kGlobalSpace )
+        
+        --offset de traslation y rotation
+        object.translate ( this.getObject ( ), this.pivotX ( ),this.pivotY ( ),this.pivotZ ( ), object.kLocalSpace )
+        object.rotate ( this.getObject ( ), this.orientX ( ),this.orientY ( ),this.orientZ ( ), object.kLocalSpace )
+    
+        --------------------------
+        -- movimiento de enfado --
+        local tf=this.tremblingFhase ( )
+        tf=tf+1
+        local tlimit=10
+        if (this.trembling ( )==2) then tlimit=5 end
+        if (tf>=tlimit) then
+            local tx=math.random ( -0.1,0.1 ) * this.trembling ( )
+            local ty=math.random ( -0.1,0.1 ) * this.trembling ( )
+            object.translate ( this.target ( ), tx,0,0, object.kGlobalSpace )
+            tf=0
+        end
+        local trx = math.random ( -0.005, 0.005) * this.trembling ( ) * this.trembling ( )
+        local try = math.random ( -0.005, 0.005) * this.trembling ( ) * this.trembling ( )
+        object.translate ( this.getObject ( ), trx,try,0, object.kGlobalSpace )
+        this.tremblingFhase ( tf )
+        -- fin movimiento de enfado --
+        ------------------------------
+        
+        -- set the sensor object, onto the visible object
+        object.matchTranslation ( this.sensor ( ), this.getObject ( ), object.kGlobalSpace )
+   end
+    
+
+--------------------------------------------------------------------------------
+end
+--------------------------------------------------------------------------------

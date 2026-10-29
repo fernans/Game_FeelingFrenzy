@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function inGameAI.gameOverWin_onEnter()
+
+
+
+
+
+local hUser=application.getCurrentUser()
+hud.destroyTemplateInstance(hUser,"gameOverWinSplash")
+hud.newTemplateInstance(hUser,"gameOverWinSplash","gameOverWinSplash")
+
+
+
+
+
+
+end

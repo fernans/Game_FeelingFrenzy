@@ -1,0 +1,55 @@
+start game/quit game:
+y_kimochi, z_out
+  
+main menu
+background music A
+button sounds: 
+b_play, a_generico
+
+about/scores/howto screens
+background music A
+button sounds:
+c_back,g_clear,a_generico
+splash:
+d_how to, e_scores, f_about
+
+
+
+enter_name
+background music B
+button sounds:
+c_back, h_go
+splash: a
+
+
+select_level
+background music B
+button sounds:
+c_back, i,j,k,l
+splash:b_choose level
+
+
+
+
+splash_screens
+level splash:g,h,i,j
+win_splash: k
+loose_splash: l
+win_end_game: m
+
+during game:
+background musics: (music D:bug, music E:cloud, music F:cat, music G:huggs)
+sounds:
+m_catch_good_feeling
+n_catch_bad_feeling 
+o_downgrade(get_angry) 
+p_upgrade(get_happy) 
+q_bubble_explode 
+r_start_prize: grow/shrink 
+s_end_prize: grow/shrink 
+t_near_loose: like a "hurry up" 
+u_near_win
+
+pause menu:
+sound buttons:
+v_pause, w_resume,x_exit

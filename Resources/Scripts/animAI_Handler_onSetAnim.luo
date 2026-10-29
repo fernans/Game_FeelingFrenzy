@@ -1,0 +1,12 @@
+
+
+
+
+
+
+
+function animAI.onSetAnim(_name)
+
+this.setAnim(_name)
+
+end

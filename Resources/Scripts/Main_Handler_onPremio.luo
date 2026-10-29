@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function Main.onPremio(t)
+
+
+
+
+
+local sceneObj=scene.getTaggedObject(application.getCurrentUserScene(),"sceneAI")
+local sceneAI=object.getAIModelNameAt(sceneObj,0)
+object.sendEvent(sceneObj,sceneAI,"onPremio",t)
+
+end

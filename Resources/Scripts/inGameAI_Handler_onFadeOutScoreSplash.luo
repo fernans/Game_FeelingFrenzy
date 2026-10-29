@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+function inGameAI.onFadeOutScoreSplash()
+
+
+
+
+
+if(this.level()<=4)then
+this.levelSplash()
+else
+this.gameOverWin()
+end
+
+end
