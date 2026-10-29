@@ -1,6 +1,9 @@
 # === Excluded by design (sensitive / not for publication) ===
 # Apple signing certificates, private keys and provisioning profiles
 docs/
+*.mobileprovision
+*.p12
+*.cer
 # Internal correspondence and docs (developer exchange)
 Final_Backup/
 old_23_08_2010/
